@@ -1,14 +1,49 @@
-.wrapper{
+body{
     margin: 0;
+}
+
+.wrapper{
     display: grid;
-    grid-template-rows: 200px 50px auto 100px;
+    grid-template-rows: 200px 50px auto auto;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 main{
-    min-height: 500px;
+    min-height: 350px;
+    margin: 0 15% 0 15%;
+    background-color: rgba(240, 240, 240, 0.5)
 }
 
 footer{
     display: flex;
     flex-direction: row;
+    min-height: 100px;
 }
+
+.topbar{
+    display: grid;
+    grid-template-columns: 50px auto;
+    position: sticky;
+}
+
+.top{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.burgermenucontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.burgermenu{
+    margin-left: -300px;
+}
+
