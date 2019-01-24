@@ -14,20 +14,21 @@ header{
 }
 
 main{
-    min-height: 350px;
+    min-height: 400px;
     margin: 0 15% 0 15%;
-    background-color: rgba(240, 240, 240, 0.5)
+    background-color: rgba(240, 240, 255, 0.5)
 }
 
 footer{
     display: flex;
     flex-direction: row;
     min-height: 100px;
+    background-color: rgba(240, 240, 255, 0.5)
 }
 
 .topbar{
     display: grid;
-    grid-template-columns: 50px auto;
+    grid-template-columns: 15% 70%;
     position: sticky;
 }
 
@@ -35,15 +36,20 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgba(240, 240, 255, 0.5)
 }
 
 .burgermenucontainer{
     display: flex;
     justify-content: center;
     align-items: center;    
+    background-color: rgba(240, 240, 255, 0.5)
 }
 
 .burgermenu{
     margin-left: -300px;
 }
 
+.lobster{
+    font-family: 'Lobster', cursive;
+}

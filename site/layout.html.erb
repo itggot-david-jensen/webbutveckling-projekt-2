@@ -6,23 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="css/main.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+
     <title>God Jul!</title>
 </head>
 <body>
     <div class="wrapper">
         <header>
-            <h1>God Jul</h1>
+            <h1 class="lobster">God Jul</h1>
         </header>
         <%=yield%>
-        <div class="menucontainer" onclick="menuclose()">
         <div class="menu">
-        <div class="calendar"></div>
-        <a href=""></a>
-        <a href=""></a>
+        <div class="calendar"></div> <ul>
+        <li class="food"><a href="food.html" class="lobster">Tasty Food!</a></li>
+        <li class="index"><a href="index.html" class="lobster">Nice Music!</a></li>
+    </ul>
         </div>
-        <div class="background"></div>
-        </div>
-        <footer>
+        <div class="menubackground" onclick="menuclose()"></div>
+        <footer class="lobster">
             <div class="contact">
                 <h3>Contact me at</h3>
                 <ul>
