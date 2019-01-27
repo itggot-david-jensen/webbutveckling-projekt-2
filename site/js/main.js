@@ -14,57 +14,61 @@ function menuclose(clickity){
 
 function randomsong(buttonclikcity){
     let songID = Math.floor(Math.random()*6)+1
-    let iFrame1 = document.querySelector("#iframe1")
-    let iFrame2 = document.querySelector("#iframe2")
-    let iFrame3 = document.querySelector("#iframe3")
-    let iFrame4 = document.querySelector("#iframe4")
-    let iFrame5 = document.querySelector("#iframe5")
-    let iFrame6 = document.querySelector("#iframe6")
 
     if (songID == 1) {
-        iFrame1.classList.add("active")
-        iFrame2.classList.remove("active")
-        iFrame3.classList.remove("active")
-        iFrame4.classList.remove("active")
-        iFrame5.classList.remove("active")
-        iFrame6.classList.remove("active")
-
+// You've been gnomed
+        document.getElementById("randomsongframe").innerHTML = '<iframe  id="iframe" src="https://www.youtube.com/embed/6n3pFFPSlW4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
     } else if (songID == 2) {
-        iFrame2.classList.add("active")
-        iFrame1.classList.remove("active")
-        iFrame3.classList.remove("active")
-        iFrame4.classList.remove("active")
-        iFrame5.classList.remove("active")
-        iFrame6.classList.remove("active")
+// Nyan cat 10 hours
+        document.getElementById("randomsongframe").innerHTML = '<iframe  id="iframe" src="https://www.youtube.com/embed/wZZ7oFKsKzY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
     } else if (songID == 3) {
-        iFrame3.classList.add("active")
-        iFrame2.classList.remove("active")
-        iFrame1.classList.remove("active")
-        iFrame4.classList.remove("active")
-        iFrame5.classList.remove("active")
-        iFrame6.classList.remove("active")
+// This is sparta remix 10 hours
+        document.getElementById("randomsongframe").innerHTML = '<iframe  id="iframe" src="https://www.youtube.com/embed/T8r3cWM4JII" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
     } else if (songID == 4) {
-        iFrame4.classList.add("active")
-        iFrame2.classList.remove("active")
-        iFrame3.classList.remove("active")
-        iFrame1.classList.remove("active")
-        iFrame5.classList.remove("active")
-        iFrame6.classList.remove("active")
+// They're taking the hobbits to Isengard 10 hours
+        document.getElementById("randomsongframe").innerHTML = '<iframe  id="iframe" src="https://www.youtube.com/embed/z9Uz1icjwrM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
     } else if (songID == 5) {
-        iFrame5.classList.add("active")
-        iFrame2.classList.remove("active")
-        iFrame3.classList.remove("active")
-        iFrame4.classList.remove("active")
-        iFrame1.classList.remove("active")
-        iFrame6.classList.remove("active")
+// Crab Rave - Noisestorm
+        document.getElementById("randomsongframe").innerHTML = '<iframe  id="iframe" src="https://www.youtube.com/embed/LDU_Txk06tM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
     } else if (songID == 6) {
-        iFrame6.classList.add("active")
-        iFrame2.classList.remove("active")
-        iFrame3.classList.remove("active")
-        iFrame4.classList.remove("active")
-        iFrame5.classList.remove("active")
-        iFrame1.classList.remove("active")
+// We are number one but THIS IS SPARTA
+        document.getElementById("randomsongframe").innerHTML = '<iframe  id="iframe" src="https://www.youtube.com/embed/dJGCBNndLHc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
     }   
 
 }
 
+function countdown(){
+    var end = new Date('12/24/2019')
+
+    var _second = 1000
+    var _minute = _second * 60
+    var _hour = _minute * 60
+    var _day = _hour * 24
+    var timer
+
+    function showRemaining() {
+        var now = new Date()
+        var distance = end - now
+        if (distance < 0) {
+
+            clearInterval(timer)
+            document.getElementById('countdown').innerHTML = 'countdown has expired, please contact administrator'
+
+            return;
+        }
+        var days = Math.floor(distance / _day)
+        var hours = Math.floor((distance % _day) / _hour)
+        var minutes = Math.floor((distance % _hour) / _minute)
+        var seconds = Math.floor((distance % _minute) / _second)
+
+        document.getElementById('days').innerHTML = days + ' days'
+        document.getElementById('hours').innerHTML = hours + ' hours'
+        document.getElementById('minutesseconds').innerHTML = minutes + ' minutes '
+        document.getElementById('minutesseconds').innerHTML += seconds + ' seconds'
+    }
+
+    timer = setInterval(showRemaining, 1000)
+}
+
+window.onload = randomsong()
+window.onload = countdown()

@@ -1,0 +1,126 @@
+.foodwrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 70vw;
+    flex-wrap: wrap;
+}
+
+.foodcontainer{
+    width: 30vw;
+    height: 30vw;
+    border-radius: 5px;
+}
+
+#chicken{
+    background-image: url(../img/chicken_mobile.jpg)
+}
+
+#brownies{
+    background-image: url(../img/brownies_mobile.jpg)
+}
+
+#hotcocoa{
+    background-image: url(../img/hotchocolate_mobile.jpg)
+}
+
+#chocolate{
+    background-image: url(../img/chocolate_mobile.jpg)
+}
+
+#ham{
+    background-image: url(../img/ham_mobile.jpg)
+}
+
+#mudcake{
+    background-image: url(../img/mudcake_mobile.jpg)
+}
+
+#scones{
+    background-image: url(../img/scones_mobile.jpg)
+}
+
+#cheesecake{
+    background-image: url(../img/cheesecake_mobile.jpg)
+}
+
+.tophalf{
+    width: 100%;
+    height: 80%;
+    z-index: 10;
+}
+
+.bottomhalf{
+    height: 20%;
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    align-items: center;
+}
+
+.foodtitle{
+    margin: 0 0 0 5px;
+}
+
+#longtext{
+    font-size: 0.85em;
+}
+
+#very_longtext{
+    font-size: 0.75em;
+}
+
+.verticalspacer{
+    width: 2vw;
+    max-width: 20px;
+}
+
+.horizontalspacer{
+    height: 2vw;
+    max-height: 20px;
+    width: 70vw;
+}
+
+@media only screen and (min-device-width: 425px){
+
+    .foodcontainer{
+        width: 15vw;
+        height: 15vw;
+    }
+
+    .horizontalspacer{
+        max-width: 20px;
+        width: 2vw;
+        height: 0;
+    }
+
+    .verticalspacer{
+        width: 0;
+        max-height: 20px;
+        height: 2vw;
+        width: 100%;
+    }
+
+    #foodseparator{
+        width: 100%;
+        max-width: 100%;
+        height: 2vw;
+        max-height: 20px;
+    }
+
+    .wrapper{
+        grid-template-columns: 15vw auto;
+        grid-template-rows: 15vh auto auto;
+        grid-template-areas:
+        "topslot header"
+        "footer main"
+        "sidebar none"
+        ;
+        min-height: 100vh;
+    }
+
+    .top{
+        font-size: 0.6em;
+        border-radius: 0;
+    }
+}

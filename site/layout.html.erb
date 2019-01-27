@@ -7,41 +7,44 @@
     <link href="css/main.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
-
-    <title>God Jul!</title>
+    <link rel="icon" href="img/favicon.ico">
+    
+    <title>Merry Christmas!</title>
 </head>
 <body>
     <div class="wrapper">
         <header>
-            <h1 class="lobster">God Jul</h1>
+            <h1 class="lobster">Merry Christmas!</h1>
         </header>
         <%=yield%>
         <div class="menu">
-        <div class="calendar"></div> <ul>
-        <li class="food"><a href="food.html" class="lobster">Tasty Food!</a></li>
-        <li class="index"><a href="index.html" class="lobster">Nice Music!</a></li>
-    </ul>
+            <ul>
+                <li class="food"><a href="food.html" class="lobster">Tasty Food!</a></li>
+                <li class="index"><a href="index.html" class="lobster">Home</a></li>
+            </ul>
         </div>
         <div class="menubackground" onclick="menuclose()"></div>
-        <footer class="lobster">
+        <footer class="lobster light_gray_bg">
+            <div class="verticallayoutspacer"></div>
             <div class="contact">
-                <h3>Contact me at</h3>
+                <h3 class="footerheaderfonts">Contact me at</h3>
                 <ul>
-                    <li>Phone: 020 2051323</li>
-                    <li>Fax: +1-212-9876543</li>
+                    <li><div class="phonenumber">Phone: 020-2051323</div></li>
+                    <li><div class="fax">Fax: +1-212-9876543</div></li>
                 </ul>
             </div>
+            <div class="verticallayoutspacer"></div>
             <div class="festive_links">
-                <h3>Festive links (sponsored) <i class="material-icons">thumb_up</i></h3>
+                <h3 class="footerheaderfonts">Festive links (sponsored) <i class="material-icons">thumb_up</i></h3>
                 <ul>
                     <li>
                         <a href="https://www.treetopia.com/">Treetopia</a>
                     </li>
                     <li>
-                        <a href="http://www.noradsanta.org/">NORAD tomte</a>
+                        <a href="http://www.noradsanta.org/">NORAD Santa</a>
                     </li>
                     <li>
-                        <a href="https://reindeercam.com/">Ren-kamera</a>
+                        <a href="https://reindeercam.com/">Reindeer!</a>
                     </li>
                     <li>
                         <a href="https://www.elfyourself.com/">Elf-yourself</a>
@@ -50,6 +53,7 @@
             </div>
             <div class="paypal"></div>
         </footer>
+        <div class="filler light_gray_bg"></div>
     </div>
 </body>
 <script src="js/main.js"></script>

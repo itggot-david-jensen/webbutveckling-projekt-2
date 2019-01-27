@@ -4,7 +4,8 @@ body{
 
 .wrapper{
     display: grid;
-    grid-template-rows: 200px 50px auto auto;
+    grid-template-rows: 200px auto auto auto;
+    background-image: url(../img/snowfall_mobile.png);
 }
 
 header{
@@ -15,15 +16,31 @@ header{
 
 main{
     min-height: 400px;
-    margin: 0 15% 0 15%;
-    background-color: rgba(240, 240, 255, 0.5)
+    margin: 5px 15vw 5px 15vw;
+    border-radius: 5px;
 }
 
 footer{
     display: flex;
     flex-direction: row;
     min-height: 100px;
-    background-color: rgba(240, 240, 255, 0.5)
+}
+
+.light_gray_bg{
+    background-color: rgba(240, 240, 255, 0.5);
+}
+
+.mainhorizontalspacer{
+    height: 2vw;
+    max-height: 20px;
+}
+
+.contact{
+    min-width: 35vw;
+}
+
+.contact ul{
+    font-size: 0.7em;
 }
 
 .topbar{
@@ -36,14 +53,13 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(240, 240, 255, 0.5)
+    border-radius: 0 5px 5px 0;
 }
 
 .burgermenucontainer{
     display: flex;
     justify-content: center;
     align-items: center;    
-    background-color: rgba(240, 240, 255, 0.5)
 }
 
 .burgermenu{
@@ -52,4 +68,83 @@ footer{
 
 .lobster{
     font-family: 'Lobster', cursive;
+}
+
+h3{
+    font-size: 1em;
+    height: 28px;
+    display: flex;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a:visited{
+    text-decoration: none;
+    color: black;
+}
+
+.upper{
+    border-radius: 5px 5px 0 0;
+}
+
+.lower{
+    border-radius: 0 0 5px 5px;
+}
+
+.verticallayoutspacer{
+    width: 5vw;
+    max-width: 20px;
+}
+
+.filler{
+    display: none;
+}
+
+@media only screen and (min-device-width: 425px){
+    
+    .wrapper{
+        grid-template-columns: 15vw auto;
+        grid-template-rows: 15vh auto auto;
+        grid-template-areas:
+        "topslot header"
+        "footer main"
+        "sidebar main"
+        ;
+        min-height: 100vh;
+    }
+
+    .filler{
+        display: block;
+        grid-area: sidebar;
+    }
+
+    .topbar{
+        grid-area: topslot;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .top{
+        height: 75%;
+    }
+
+    header{
+        grid-area: header;
+    }
+
+    main{
+        grid-area: main;
+        margin: 0 5% 0 5%;
+        width: 900px;
+    }
+
+    footer{
+        grid-area: footer;
+        min-width: 9vw;
+        flex-direction: column;
+    }
+
 }
