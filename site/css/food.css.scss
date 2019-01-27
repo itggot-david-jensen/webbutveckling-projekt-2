@@ -86,6 +86,8 @@
     .foodcontainer{
         width: 15vw;
         height: 15vw;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
     }
 
     .horizontalspacer{
@@ -123,4 +125,37 @@
         font-size: 0.6em;
         border-radius: 0;
     }
+
+    #chicken{
+        background-image: url(../img/chicken_desktop.jpg)
+    }
+    
+    #brownies{
+        background-image: url(../img/brownies_desktop.jpg)
+    }
+    
+    #hotcocoa{
+        background-image: url(../img/hotchocolate_desktop.jpg)
+    }
+    
+    #chocolate{
+        background-image: url(../img/chocolate_desktop.jpg)
+    }
+    
+    #ham{
+        background-image: url(../img/ham_desktop.jpg)
+    }
+    
+    #mudcake{
+        background-image: url(../img/mudcake_desktop.jpg)
+    }
+    
+    #scones{
+        background-image: url(../img/scones_desktop.jpg)
+    }
+    
+    #cheesecake{
+        background-image: url(../img/cheesecake_desktop.jpg)
+    }
+    
 }
